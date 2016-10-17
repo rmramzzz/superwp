@@ -1,0 +1,2 @@
+# superwp
+WordPress Basic theme
