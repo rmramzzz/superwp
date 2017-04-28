@@ -1,0 +1,26 @@
+{
+  "name": "superwp",
+  "version": "1.0.0",
+  "description": "WP themes for any project",
+  "main": "index.js",
+  "dependencies": {
+    "node-static": "^0.7.9"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmramzzz/superwp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmramzzz/superwp/issues"
+  },
+  "homepage": "https://github.com/rmramzzz/superwp#readme"
+}
