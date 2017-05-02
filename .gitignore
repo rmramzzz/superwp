@@ -1,0 +1,29 @@
+/*
+!wp-content/
+
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+# ignore all mu-plugins, plugins, and themes
+# unless explicitly whitelisted at the end of this file
+wp-content/plugins/*
+wp-content/themes/*
+
+# ignore all files starting with . or ~
+.*
+!.gitignore
+~*
+
+# ignore node dependency directories (used by grunt)
+node_modules/
+
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!README.md
+!CHANGELOG.md
+!composer.json
+
+!wp-content/themes/supertheme/
