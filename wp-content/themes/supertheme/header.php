@@ -8,9 +8,10 @@
 </head>
 <body>
 <header>
-   <div class="header-container">
-      <?php
-         wp_nav_menu('header-menu');
-      ?>
+   <div class="header-container clearfix">
+      <div class="site-name">
+         <a href="/"><?php echo get_bloginfo('name') ?></a>
+      </div>
+      <?php wp_nav_menu('header-menu'); ?>
    </div>
 </header>

@@ -1,7 +1,25 @@
 .main-container{
   width: @container-width-large;
-  margin: 0 auto;
+  margin: 20px auto;
   @media @media-container{
     width: @container-width-tablet;
   }
+}
+
+.wrapper-content{
+  display: inline-block;
+  vertical-align: top;
+  width: @wrapper-content-width;
+  float: left;
+  padding: 0 10px;
+  margin-right: @sidebar-margin;
+}
+
+.wrapper-sidebar{
+  display: inline-block;
+  vertical-align: top;
+  width: @sidebar-width;
+  float: left;
+
+  padding: 0 5px;
 }

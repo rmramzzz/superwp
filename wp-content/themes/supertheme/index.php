@@ -5,18 +5,16 @@
   */
 ?>
 <?php get_header(); ?>
-    <div class="main-container">
-        <div class="content-container">
-            <?php if ( have_posts() ) : ?>
-                <?php while ( have_posts() ) : the_post(); ?>
-                    <?php get_template_part('content-single'); ?>
-                <?php endwhile; ?>
-            <?php endif; ?>
+    <div class="main-container clearfix">
+        <div class="wrapper-content">
+            <?php if ( have_posts() ) :
+                while ( have_posts() ) : the_post();
+                     get_template_part( 'theme-structure/content', 'single' );
+                endwhile;
+            endif; ?>
         </div>
-        <div class="sidebar">
-            <?php if( is_active_sidebar( 'header_info' ) ) : ?>
-                <?php dynamic_sidebar( 'header_info' ); ?>
-            <?php endif; ?>
+        <div class="wrapper-sidebar">
+            <?php get_sidebar(); ?>
         </div>
     </div>
 <?php get_footer(); ?>
