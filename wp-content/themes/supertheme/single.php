@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-    <div class="main-container">
-        <div class="wrapper-content clearfix">
+    <div class="main-container clearfix">
+        <div class="wrapper-content ">
             <?php
             while (have_posts()) : the_post();
                 get_template_part('theme-structure/content', 'single');

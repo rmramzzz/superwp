@@ -15,6 +15,7 @@ function add_basic_assets(){
     wp_enqueue_script('jquery-migrate', get_template_directory_uri().'/assets/js/jquery-migrate-3.0.0', array('jquery'), false, true);
 
     //Include main JS file
+    wp_enqueue_script('canv-js', get_template_directory_uri().'/assets/js/canv.js', array( 'jquery' ), false, true);
     wp_enqueue_script('main-js', get_template_directory_uri().'/assets/js/scripts.js', array( 'jquery' ), false, true);
 }
 
