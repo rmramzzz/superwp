@@ -23,12 +23,12 @@ function addTagCounter($term){
 }
 add_action ( 'edit_tag_form_fields', 'addTagCounter');
 
-function saveTagFields($term_id) {
+function edited_term($term_id) {
     if ( isset( $_POST['tag_count'] ) ) {
         update_term_meta($term_id, 'tagcounter', $_POST['tag_count']);
     }
 }
-add_action ( 'edited_tag', 'saveTagFields');
+add_action ( 'edited_post_tag', 'edited_term');
 
 function increaseTagsViews($cats){
     if(isset($cats)){
@@ -48,4 +48,25 @@ function order_tags_by_tagcounter($a, $b) {
         return 0;
     }
     return ($a > $b) ? -1 : 1;
+}
+
+function outputTagsFont($tags){
+    $start_font_size = 24;
+    $tags_size = count($tags);
+
+    if($tags_size <= 4){
+        foreach ($tags as $t){
+            $t->font_size = $start_font_size;
+            $start_font_size -= 2;
+        }
+    }else{
+        $step = 2;
+        for ($i = 0; $i < $tags_size; $i++){
+            if($i % $step == 0 && $i < 6 & $i != 0){
+                $start_font_size -= 2;
+            }
+            $tags[$i]->font_size = $start_font_size;
+        }
+    }
+
 }

@@ -9,12 +9,14 @@
             <?php the_content(); ?>
 
                 <?php
-                $post_tags = Array();
-                foreach (get_the_tags() as $tag){
-                    array_push($post_tags, $tag->term_id);
-                }
-            increaseTagsViews($post_tags);
+                    $post_tags = Array();
+                    foreach (get_the_tags() as $tag){
+                        array_push($post_tags, $tag->term_id);
+                    }
+                    increaseTagsViews($post_tags);
                 ?>
         <?php endif; ?>
+
+        <?php echo 5%3 ?>
     </div>
 </div>

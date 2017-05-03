@@ -6,14 +6,13 @@
     ) );
 
     usort($categories, "order_tags_by_tagcounter");
+    outputTagsFont($categories);
     ?>
     <canvas id="myCanvas" width="300" height="200">
         <ul>
             <?php
-                $start_font_size = 24;
                 foreach ($categories as $c){
-                    echo '<li><a href="'.get_tag_link($c).'" style="font-size: '.$start_font_size.'px;">'.$c->name.'</a></li>';
-                    $start_font_size--;
+                    echo '<li><a href="'.get_tag_link($c).'" style="font-size: '.$c->font_size.'px;">'.$c->name.'</a></li>';
                 }
             ?>
         </ul>
